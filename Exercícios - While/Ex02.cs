@@ -2,42 +2,34 @@
 cartesiano. Para cada ponto escrever o quadrante a que ele pertence. O algoritmo será encerrado quando pelo
 menos uma de duas coordenadas for NULA (nesta situação sem escrever mensagem alguma).*/ 
 
-using System;
-using System.Globalization;
 
-namespace Exercicio_While {
-	
-	class Ex02 {
-		
-		static void Main(string[] args);
-		
-		string[] vetor = Console.ReadLine().Split(' ');
-		int x = int.Parse(vetor[0], CultureInfo.InvariantCulture);
-		int y = int.Parse(vetor[1], CultureInfo.InvariantCulture);
-		
-		While (x != 0 && y != 0) {
-			
-			if (x > 0.0 && y > 0.0) {
-				Console.WriteLine("Primeiro");
-			
-			}
-			
-			else if (x < 0.0 && y > 0.0) {
-				Console.WriteLine("Segundo")
-			}
-			
-			
-			else if (x < 0.0 && y < 0.0) {
-				Console.WriteLine("Terceiro")
-			}
-			
-			else {
-				Console.WriteLine("Quarto")
-			}
-			
-			string[] vetor = Console.ReadLine().Split(' ');
-			int x = int.Parse(vetor[0], CultureInfo.InvariantCulture);
-			int y = int.Parse(vetor[1], CultureInfo.InvariantCulture);
-		} 
-	}
+using System;
+
+namespace uri1115 {
+    class Program {
+        static void Main(string[] args) {
+
+            string[] valores = Console.ReadLine().Split(' ');
+            int x = int.Parse(valores[0]);
+            int y = int.Parse(valores[1]);
+
+            while (x != 0 && y != 0) {
+                if (x > 0 && y > 0) {
+                    Console.WriteLine("primeiro");
+                }
+                else if (x < 0 && y > 0) {
+                    Console.WriteLine("segundo");
+                }
+                else if (x < 0 && y < 0) {
+                    Console.WriteLine("terceiro");
+                }
+                else {
+                    Console.WriteLine("quarto");
+                }
+                valores = Console.ReadLine().Split(' ');
+                x = int.Parse(valores[0]);
+                y = int.Parse(valores[1]);
+            }
+        }
+    }
 }
